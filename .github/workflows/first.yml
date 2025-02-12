@@ -1,0 +1,11 @@
+name: The First Workflows
+
+on:
+    push:
+      branches:
+        - main
+jobs:
+    echo:
+        runs-on: ubuntu-latest
+        steps:
+            - run: echo 'Hello, Everyone!'
