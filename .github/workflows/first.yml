@@ -9,3 +9,12 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             - run: echo 'Hello, Everyone!'
+    pwd-ls:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Print Working directory
+              run: pwd
+            - name: list Files
+              run: |
+                cd ~
+                ls -al
