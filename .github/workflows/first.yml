@@ -1,9 +1,5 @@
-name: The Second Workflows
-
-on:
-    push:
-      branches:
-        - main
+name: The second workflows
+on: push
 jobs:
   checkout:
     runs-on: ubuntu-latest
@@ -14,4 +10,4 @@ jobs:
       - name: list all again
         run: |
           ls -al
-          run : cat .github/workflows/first.yml
+          cat .github/workflows/first.yml
