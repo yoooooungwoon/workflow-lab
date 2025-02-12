@@ -10,3 +10,12 @@ jobs:
     steps:
       - name: list all
         run: ls -al
+      - uses: actions/checkout@v3 #워크플로우에서 사용하고 있는 함수형태,ckeckout 리포지토리에 있는것을 다운로드받는걸 checkout이라함
+      - name: list all again
+        run: |
+          ls -al
+          run : cat .github/workflows/first.yml
+          
+# run을 두번쓸 수 없다        run : cat .github/workflows/first.yml 
+        
+      
