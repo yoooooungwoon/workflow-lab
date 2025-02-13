@@ -22,14 +22,18 @@ jobs:
         with:
           java-version: 11
 
-
-      - name: Grant execute permission for gradlew
-        run: chmod +x ./gradlew
-        shell: bash
-     
+      - name: Setup Gradle
+        uses: gradle/gradle-build-action@v2  # Gradle 자동 설치
+        
       - name: Build with Gradle
-        run: ./gradlew build
-        shell: bash
+        run: gradle build  # gradlew 없이 Gradle 실행
+#      - name: Grant execute permission for gradlew
+#        run: chmod +x ./gradlew
+#        shell: bash
+     
+#      - name: Build with Gradle
+#        run: ./gradlew build
+#        shell: bash
         # Gradle로 프로젝트를 빌드합니다. 결과물(JAR 파일 등)이 생성
       - name: Make Zip File
         run: zip -qq -r ./$GITHUB_SHA.zip .
